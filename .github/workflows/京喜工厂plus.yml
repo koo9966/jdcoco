@@ -1,4 +1,4 @@
-name: 京喜工厂plus
+name: 京喜签到
 
 on:
     workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行【京喜工厂plus】"
+            - name: "运行【京喜每日签到】"
               run: |
                   node onlyOneExecute.js
               env:
@@ -33,4 +33,4 @@ jobs:
                   TG_USER_ID: ${{ secrets.TG_USER_ID }}
                   DD_BOT_TOKEN: ${{ secrets.DD_BOT_TOKEN }}
                   DD_BOT_SECRET: ${{ secrets.DD_BOT_SECRET }}
-                  SYNCURL: https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_factory_component.js
+                  SYNCURL: https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jingxi.js
