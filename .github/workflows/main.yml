@@ -1,4 +1,4 @@
-name: 京喜签到
+name: 京喜工厂plus
 
 on:
     workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行【京喜每日签到】"
+            - name: "运行【京喜工厂plus】"
               run: |
                   node onlyOneExecute.js
               env:
