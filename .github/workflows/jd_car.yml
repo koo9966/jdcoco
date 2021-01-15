@@ -9,6 +9,7 @@ on:
       - cron: '20 23,4,10 * * *'
 watch:
     types: started
+on:
 repository_dispatch:
     types: jd_car
 
