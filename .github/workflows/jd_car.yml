@@ -36,6 +36,7 @@ jobs:
                   TRIGGER_KEYWORDS: ${{ secrets.jd_car }}
                   GITHUBUSER: ${{ secrets.koo9966 }}
                   REPO: ${{ secrets.jdcoco }}
+                  CRONTAB: ${{16 22 * * *}}
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ github.event.client_payload.BARK_PUSH || secrets.BARK_PUSH }}
                   BARK_SOUND: ${{ github.event.client_payload.BARK_SOUND || secrets.BARK_SOUND }}
