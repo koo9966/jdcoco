@@ -36,7 +36,7 @@ jobs:
                   TRIGGER_KEYWORDS: ${{ secrets.jd_car }}
                   GITHUBUSER: ${{ secrets.koo9966 }}
                   REPO: ${{ secrets.jdcoco }}
-                  CRONTAB: ${{16 22 * * *}}
+                  CRONTAB: ${{ '0 0 0,16 * * *' }} #定时在每天0和下午4点整执行一次
                   PUSH_KEY: ${{ github.event.client_payload.PUSH_KEY || secrets.PUSH_KEY }}
                   BARK_PUSH: ${{ github.event.client_payload.BARK_PUSH || secrets.BARK_PUSH }}
                   BARK_SOUND: ${{ github.event.client_payload.BARK_SOUND || secrets.BARK_SOUND }}
