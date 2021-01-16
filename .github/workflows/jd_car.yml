@@ -10,7 +10,7 @@ on:
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_car
+        types: schedule
 
 jobs:
     build:
@@ -26,8 +26,9 @@ jobs:
               run: |
                   npm install
             - name: "运行 【京东汽车】"
+              timeout-minutes: 40 #有需要的话,可以加上这个超时时间
               run: |
-                  node onlyOneExecute.js
+                  node schedule.js
               env:
                   JD_COOKIE: ${{ github.event.client_payload.JD_COOKIE || secrets.JD_COOKIE }}
                   JD_DEBUG: ${{ github.event.client_payload.JD_DEBUG || secrets.JD_DEBUG }}
